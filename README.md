@@ -1,5 +1,10 @@
 # Wii-Scale
 
+**I'm using this fork as a place to gather together patches for
+aelveborn/Wii-Scale before they can be merged upstream.  This master branch
+combines the fixes and enhancements in one place, so can be used as a way to
+test all of the patches together.**
+
 Wii-Scale turns your Wii Balance Board into a digital scale. Wii-Scale will automatically find your Wii Balance Board when it is connected to your computer. All you have to do is just stand on it :) No boring console interface, watch your weight being calculated in realtime on a beautiful web insterface.
 
 You can also create multiple users for the whole family and see each members weight history. Wii-Scale runs on Linux and it also runs on a Raspberry Pi.
@@ -31,7 +36,7 @@ To communicate with your Wii Balance Board you'll need a bluetooth 2.0 or 2.1 co
 Download latest version of Wii-Scale:
 
 	cd <your-directory>/
-	git clone https://github.com/aelveborn/Wii-Scale.git --recursive --depth 1
+	git clone https://github.com/ribbons/Wii-Scale.git --recursive --depth 1
 	cd Wii-Scale/
 
 Allow non-root users to access balance board:
