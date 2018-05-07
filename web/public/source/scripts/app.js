@@ -29,6 +29,7 @@
         'btford.socket-io',
         'app.controllers',
         'app.directives',
+        'app.filters',
         'app.services'
     ]).
 

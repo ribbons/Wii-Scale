@@ -34,6 +34,8 @@
                 weight: 0
             };
 
+            $rootScope.settings = { };
+
             $scope.status = {
 
                 start: false,
@@ -122,6 +124,10 @@
 
 
             // Socket
+
+            socket.on(socketCommands.SETTINGS_RECEIVE_VALS, function(data) {
+                $rootScope.settings = data;
+            });
 
             socket.on(socketCommands.ENTRIES_RECEIVE_LIST, function(data) {
                 if(data !== null && data !== undefined) {

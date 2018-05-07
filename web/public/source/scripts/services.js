@@ -36,6 +36,8 @@
                 DEVICE_CONNECT:         'device connect',
                 DEVICE_DISCONNECT:      'device disconnect',
 
+                SETTINGS_RECEIVE_VALS:  'settings values',
+
                 USERS_ADD:              'users add',
                 USERS_REMOVE:           'users remove',
                 USERS_RECEIVE_LIST:     'users list',
