@@ -53,7 +53,7 @@ Now the web server and Wii-Scale should be up and running at [http://localhost:8
 
 ## Configuration (optional)
 
-You can configure a different host, port and calibration.
+You can configure the host, port, calibration and displayed weight units.
 
 ### Access the web interface from other computers
 
@@ -79,6 +79,12 @@ If the scales weight is off by any amout you can calibrate it by your own by set
 
 	npm config set wii-scale:calibrate 0
 
+### Change weight display unit
+
+If you'd prefer the weights to be displayed in different units, you can choose
+between 'kgs' (default), 'lbs' or 'stones'
+
+	npm config set wii-scale:units kgs
 
 ## Update
 

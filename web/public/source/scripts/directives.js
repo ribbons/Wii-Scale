@@ -183,7 +183,7 @@
 			};
 		}]).
 
-		directive('lineChart', ['$filter', '$rootScope', function ($filter, $rootScope){
+		directive('lineChart', ['$filter', '$rootScope', '$sce', function ($filter, $rootScope, $sce){
 			return {
 				scope: {
 					entries: '='
@@ -281,11 +281,14 @@
 							var $point = $(this);
 							var value = $point.attr('ct:value');
 
-							$toolTip.html(value + ' kg').show();
+							$toolTip.html(
+								$sce.getTrustedHtml($filter('formatWeight')(value, $rootScope.settings.units))
+							).show();
+
 							$toolTip.css({
 								left: $point.offset().left - (($toolTip.width() / 2) + 8),
 								top: $point.offset().top - 40
-							});							
+							});
 						});
 
 						element.on('mouseleave', '.ct-point', function() {

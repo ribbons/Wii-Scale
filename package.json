@@ -14,7 +14,8 @@
   "config": {
     "host": "localhost",
     "port": "8080",
-    "calibrate": 0
+    "calibrate": 0,
+    "units": "kgs"
   },
   "scripts": {
     "test": "mocha",

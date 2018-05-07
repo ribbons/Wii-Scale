@@ -74,6 +74,8 @@ module.exports = function(io) {
 
         CLIENT_RCV_LOAD:  			'client load',
 
+        SETTINGS_SEND_VALUES:       'settings values',
+
         USERS_RCV_ADD:              'users add',
         USERS_RCV_REMOVE:           'users remove',
         USERS_SEND_LIST:     		'users list',
@@ -114,6 +116,11 @@ module.exports = function(io) {
 
 		// Send initial data to client
 		socket.on(cmd.CLIENT_RCV_LOAD, function () {
+			// Send current settings to the user
+			socket.emit(cmd.SETTINGS_SEND_VALUES, {
+				units: process.env.npm_package_config_units,
+			});
+
 			// Send all saved entries to the user
 			socket.emit(cmd.USERS_SEND_LIST, users.get());
 
